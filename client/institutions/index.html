@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekoky</title>
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container" style="justify-content: center;">
+        <a class="navbar-brand"href="#">
+          <img src="./logo.png" alt="Ekoky logo" width="120" >
+        </a>
+      </div>
+    </nav>
+    <div class="container py-3">
+      <div class="row">
+        
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md">
+              <div class="card card-body bg-light rounded-0 mb-4 text-center">
+                <h3>
+                  Offers
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div id="offersList" class="row"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-body bg-light rounded-0 mb-4">
+            <h3>
+              Institutions
+            </h3>
+            <div class="d-flex align-items-center">
+              <span class="material-icons"> account_balance_wallet </span>
+              <span class="ms-2">Wallet</span>
+            </div>
+            <span id="account"></span>
+          </div>
+
+          <form id="offerForm" class="card card-body bg-light">
+            <h6>Post an offer</h6>
+            <input
+              type="text"
+              id="name"
+              class="form-control bg-light  rounded-0  my-1"
+              placeholder="Write your institute name"
+              autofocus
+            />
+            <input
+              type="text"
+              id="objective"
+              class="form-control bg-light  rounded-0  my-1"
+              placeholder="Write an objective"
+              autofocus
+            />
+            <input
+              type="text"
+              id="location"
+              class="form-control bg-light  rounded-0  my-1"
+              placeholder="Location"
+              autofocus
+            />
+            <div class="input-group">
+              <input
+              type="text"
+              id="email"
+              class="form-control bg-light  rounded-0  my-1"
+              placeholder="Email"
+              autofocus
+              />
+              <input
+                type="text"
+                id="phone"
+                class="form-control bg-light  rounded-0  my-1"
+                placeholder="Phone"
+                autofocus
+              />
+            </div>
+            <button class="btn btn-primary">Post Offer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
+    <script src="/libs/@truffle/contract/dist/truffle-contract.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./ui.js"></script>
+  </body>
+</html>
