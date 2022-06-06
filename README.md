@@ -11,15 +11,19 @@ An eco-friendly, logistical solution with a great introduction to blockchain for
 
 ## Local Test
 
-> npm i
+  npm i
 
 add your .secret and check development network on truffle-config.js
 
-> truffle build
+  truffle build
 
-> truffle migrate --reset
+  truffle migrate --reset
 
-> npm run dev
+  npm run dev
+
+Go first to http://localhost:3001/institutions/index.html
+
+then to http://localhost:3001/business/index.html
 
 ## Stack
 
