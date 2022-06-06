@@ -18,6 +18,8 @@ add your .secret with Ganache mnemonic, then check development network on truffl
     truffle build
 
     truffle migrate --reset
+    
+    truffle test --network development
 
     npm run dev
 
