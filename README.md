@@ -2,14 +2,14 @@
 
 An eco-friendly, logistical solution with a great introduction to blockchain for businesses to solve this problem.
 
-# Requirements
+## Requirements
 
 * Nodejs
 * Truffle
 * Ganache
 * Metamask with Ganache network and accounts
 
-# Local Test
+## Local Test
 
 > npm i
 
@@ -21,7 +21,7 @@ add your .secret and check development network on truffle-config.js
 
 > npm run dev
 
-# Stack
+## Stack
 
 The stack and tools of this application is:
 
