@@ -34,7 +34,7 @@ contract EkokyContract {
     mapping(uint256 => Offer) public offers;
 
     constructor() {
-        createOffer(0, "Walmart", "Waste of good quality fruits", "Waste of 1 ton of fruit and vegetables, 0.5 tons of rotten food, 0.2 tons of canned food. Canned food stored in boxes", "Tulum #1337 Mexico", "Walmart.Cancun@gmail.com", "012 3232 23 49");
+        createOffer(0, "Walmart", "We waste fruit, vegetables and canned food in good condition", "Waste of 1 ton of fruit and vegetables, 0.5 tons of rotten food, 0.2 tons of canned food. Canned food stored in boxes", "Tulum #1337 Mexico", "Walmart.Cancun@gmail.com", "012 3232 23 49");
     }
 
     function createOffer(uint256 _interested, string memory _name, string memory _objective, string memory _description , string memory _location, string memory _email, string memory _phone)

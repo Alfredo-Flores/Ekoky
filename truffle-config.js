@@ -17,20 +17,19 @@ module.exports = {
             port: 7545,
             network_id: "5777",
         },
-        zsc: { // configuration for ZENIQ Smart Chain
+        zeniq: { // configuration for ZENIQ Smart Chain
             provider: () => {
-                const mnemonic = fs.readFileSync(pathToMnemonics).toString().trim();
                 return new HDWalletProvider(mnemonic, zscURL);
             },
             network_id: zscChainID
-         },
+        },
     },
 
     // Configure your compilers
     compilers: {
         solc: {
-            version: "pragma",    // Fetch exact version from solc-bin (default: truffle's version)
-            settings: {          // See the solidity docs for advice about optimization and evmVersion
+            version: "pragma", // Fetch exact version from solc-bin (default: truffle's version)
+            settings: { // See the solidity docs for advice about optimization and evmVersion
                 optimizer: {
                     enabled: true,
                     runs: 200
