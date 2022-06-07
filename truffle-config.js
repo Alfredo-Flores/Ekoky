@@ -1,9 +1,4 @@
-
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-
-// const mnemonic = "garage bullet push online quick bind gas race parrot own leave survey";
-
-// use a ".secret" file to avoid committing a mnemonic into Git
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
@@ -11,8 +6,6 @@ const zscURL = "https://smart1.zeniq.network:9545";
 //const zscURL = "https://smart2.zeniq.network:9545";
 //const zscURL = "https://smart3.zeniq.network:9545";
 const zscChainID = 383414847825;
-
-
 
 module.exports = {
     networks: {
@@ -25,10 +18,12 @@ module.exports = {
             network_id: "5777",
         },
         zsc: { // configuration for ZENIQ Smart Chain
-           provider: () => new HDWalletProvider(mnemonic, zscURL),
-           network_id: zscChainID,
-           gasPrice: 10
-        },
+            provider: () => {
+                const mnemonic = fs.readFileSync(pathToMnemonics).toString().trim();
+                return new HDWalletProvider(mnemonic, zscURL);
+            },
+            network_id: zscChainID
+         },
     },
 
     // Configure your compilers

@@ -12,44 +12,20 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar special-navbar">
       <div class="container" style="justify-content: center;">
         <a class="navbar-brand"href="#">
           <img src="./logo.png" alt="Ekoky logo" width="120" >
         </a>
       </div>
     </nav>
-    <div class="container py-3">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-Title text-center py-3">
-              <h2>Last Transactions</h2>
-            </div>
-            <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Movement</th>
-                    <th scope="col">When</th>
-                  </tr>
-                </thead>
-                <tbody id="offersList">
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
     <script src="/libs/@truffle/contract/dist/truffle-contract.min.js"></script>
-    <script src="./app.js"></script>
-    <script src="./ui.js"></script>
   </body>
 </html>

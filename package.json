@@ -18,10 +18,9 @@
     "@openzeppelin/contracts": "^4.5.0",
     "@truffle/contract": "^4.3.21",
     "@truffle/hdwallet-provider": "^2.0.4",
-    "bn.js": "^5.2.0",
+    "truffle": "^5.4.30",
     "bootstrap": "^5.0.2",
     "chai": "^4.3.4",
-    "ethers": "^5.6.8",
     "lite-server": "^2.6.1",
     "sweetalert2": "^11.4.17",
     "web3": "^1.7.0"

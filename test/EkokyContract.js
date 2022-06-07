@@ -19,13 +19,13 @@ contract("EkokyContract", (accounts) => {
     const offer = await this.ekokyContract.offers(offersCounter);
 
     assert.equal(offer.id.toNumber(), offersCounter.toNumber());
-    assert.equal(offer.name, "Playa del carmen charity");
-    assert.equal(offer.objective, "Collecting food for children");
+    assert.equal(offer.name, "Walmart");
+    assert.equal(offer.objective, "Waste of good quality fruits");
     assert.equal(offersCounter, 1);
   });
 
   it("offer created successfully", async () => {
-    const result = await this.ekokyContract.createOffer(2,"An institute", "for renewable energy from organic waste", "#1337 Mexico", "institute@gmail.com", "012 322 23 44");
+    const result = await this.ekokyContract.createOffer(2,"A restaurant", "Total organic waste", "Valladolid #1337 Mexico", "restaurant@gmail.com", "012 3223 23 44", 2);
     const offerEvent = result.logs[0].args;
     const offersCounter = await this.ekokyContract.offersCounter();
 
@@ -36,7 +36,7 @@ contract("EkokyContract", (accounts) => {
   });
   
   it("create offer with one acc, ''claim'' it with another acc", async () => {
-    const result = await this.ekokyContract.createOffer(0,"Durango Charity", "for farming industry", "durango #1337 Mexico", "durangoo@gmail.com", "012 322 23 44", {from: accounts[0]});
+    const result = await this.ekokyContract.createOffer(0,"Durango Charity", "for farming industry", "durango #1337 Mexico", "durangoo@gmail.com", "012 322 23 44", 4, {from: accounts[0]});
     const offerEvent = result.logs[0].args;
     const offersCounter = await this.ekokyContract.offersCounter();
 
